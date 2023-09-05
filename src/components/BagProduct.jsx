@@ -2,11 +2,11 @@ import "../css/BagProduct.css";
 import Nav from './nav';
 import product from "../asset/img/shoe19_720x.webp"
 import React, { useState, useEffect} from 'react';
-import Paypal from "../asset/img/196566.png"
+//import Paypal from "../asset/img/196566.png"
 import axios from 'axios';
 import { Buffer } from "buffer";
 import {useMemo } from "react";
-import { PayPalButton } from "@repeatgg/react-paypal-button-v2";
+//import { PayPalButton } from "@repeatgg/react-paypal-button-v2";
 import { da } from "date-fns/locale";
 export const BagProduct = () => {
   const [value, setValue] = useState("");
@@ -100,24 +100,24 @@ function limitPoint()
   }
 };
 const [config,setconfig ] = useState([]);
-useMemo(()=>{
-  axios({
-    method: 'get',
-    url: `http://localhost:4000/payment/config`,
-  })
-    .then(result => {
-    setconfig(result.data.data)
-     const script=document.createElement('script')
-     script.type='text/javascript'
-     script.src=`https://www.paypal.com/sdk/js?client-id=${config}`
-     script.async=true;
-     script.onload=()=>{
-      setsdk(true)
-     }
-     document.body.appendChild(script)
-    })
-    .catch(error => {   
-    });
+// useMemo(()=>{
+//   axios({
+//     method: 'get',
+//     url: `http://localhost:4000/payment/config`,
+//   })
+//     .then(result => {
+//     setconfig(result.data.data)
+//      const script=document.createElement('script')
+//      script.type='text/javascript'
+//      script.src=`https://www.paypal.com/sdk/js?client-id=${config}`
+//      script.async=true;
+//      script.onload=()=>{
+//       setsdk(true)
+//      }
+//      document.body.appendChild(script)
+//     })
+//     .catch(error => {   
+//     });
     
   
 },[])
