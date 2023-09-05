@@ -2,7 +2,7 @@ import "../css/BagProduct.css";
 import Nav from './nav';
 import product from "../asset/img/shoe19_720x.webp"
 import React, { useState, useEffect} from 'react';
-//import Paypal from "../asset/img/196566.png"
+import Paypal from "../asset/img/196566.png"
 import axios from 'axios';
 import { Buffer } from "buffer";
 import {useMemo } from "react";
@@ -99,7 +99,7 @@ function limitPoint()
     Element4[1].innerHTML='Discounted Price:'+Element4[1].innerHTML
   }
 };
-const [config,setconfig ] = useState([]);
+// const [config,setconfig ] = useState([]);
 // useMemo(()=>{
 //   axios({
 //     method: 'get',
@@ -120,8 +120,8 @@ const [config,setconfig ] = useState([]);
 //     });
     
   
-},[])
-console.log(config)
+// },[])
+// console.log(config)
 return (
     <div>
     <Nav/>
@@ -286,7 +286,7 @@ return (
           <div className="price"></div>
           <div className="title_price" value="2">Discounted Price:{sum-value*5} </div>
           <div className="D_price"></div>
-          <PayPalButton
+{/*           <PayPalButton
         amount={sum-value*5}
         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
@@ -364,7 +364,7 @@ return (
         window.location.reload();}
         }
         
-      />
+      /> */}
         </div>
       </div>
       </div>
